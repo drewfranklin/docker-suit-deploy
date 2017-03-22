@@ -1,12 +1,5 @@
 FROM livingobjects/rsync
 
 # Install Server
-RUN apk --update add ruby && \
+RUN apk --update add ruby ruby-bundler && \
 rm -rf /var/cache/apk/*
-
-# =========================================================================
-# Install Ruby Gems
-# =========================================================================
-
-RUN gem update --system
-RUN gem install bundler
