@@ -8,4 +8,5 @@ rm -rf /var/cache/apk/*
 # Install Ruby Gems
 # =========================================================================
 
+RUN gem update --system
 RUN gem install bundler
