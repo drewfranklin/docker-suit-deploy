@@ -1,5 +1,5 @@
-FROM livingobjects/rsync
+FROM alpine
 
 # Install Server
-RUN apk --update add ruby ruby-bundler && \
-rm -rf /var/cache/apk/*
+RUN apk --update add curl wget bzip2 unzip bash lsyncd rsync openssh-client nmap nmap-ncat jq ruby ruby-io-console ruby-bundler && \
+    rm -rf /var/cache/apk/*
