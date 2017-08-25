@@ -1,7 +1,7 @@
 FROM node:alpine
 
 # Install Server
-RUN apk --update add curl \
+RUN apk --update add --no-cache curl \
     wget \
     bzip2 \
     unzip \
@@ -15,6 +15,7 @@ RUN apk --update add curl \
     python \
     make \
     g++ \
+    gcc \
     ruby \
     ruby-io-console \
     ruby-json \
